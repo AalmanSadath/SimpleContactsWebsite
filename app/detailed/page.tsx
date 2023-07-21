@@ -32,12 +32,11 @@ const Details = () => {
   const user = users.filter(
     function (idNum){
       return(
-        idNum.id == id
+        (idNum as any).id == id
       )
     }
   )
   const userObj=user[0] || 0
-  console.log(user)
 
   return (
       <div className='whole'>
@@ -51,33 +50,33 @@ const Details = () => {
             </tr>
         </thead>
         <tbody>
-                <tr key={userObj.name}>
+                <tr key={(userObj as any).name}>
                       <td>
-                          <div className='name'>{person} {userObj.name}
+                          <div className='name'>{person} {(userObj as any).name}
                           </div>
                       </td>
                       <td>
                       </td>
                 </tr>
-                <tr key={userObj.phone}>
+                <tr key={(userObj as any).phone}>
                       <td>
-                          <div className='name'>{phone} <a href={`tel:${userObj.phone}`} >{userObj.phone}</a>
+                          <div className='name'>{phone} <a href={`tel:${(userObj as any).phone}`} >{(userObj as any).phone}</a>
                           </div>
                       </td>
                       <td>
                       </td>
                 </tr>
-                <tr key={userObj.email}>
+                <tr key={(userObj as any).email}>
                       <td>
-                          <div className='name'>{mail} <a href={`mailto:${userObj.email}`}>{userObj.email}</a>
+                          <div className='name'>{mail} <a href={`mailto:${(userObj as any).email}`}>{(userObj as any).email}</a>
                           </div>
                       </td>
                       <td>
                       </td>
                 </tr>
-                <tr key={userObj.website}>
+                <tr key={(userObj as any).website}>
                       <td>
-                          <div className='name'>{website} <a href={`https://${userObj.website}`} target='_blank'>{userObj.website}</a>
+                          <div className='name'>{website} <a href={`https://${(userObj as any).website}`} target='_blank'>{(userObj as any).website}</a>
                           </div>
                       </td>
                       <td>

@@ -20,7 +20,7 @@ const App = () => {
             var data = await fetch(endpoint)
                 .then(res => res.json())
             
-            data = data.sort((a, b) => {
+            data = data.sort((a: { name: number; }, b: { name: number; }) => {
                 if (a.name < b.name) {
                   return -1;
                  }
@@ -45,12 +45,12 @@ const App = () => {
           </thead>
           <tbody>
               {users.map(user => (
-                  <tr key={user.id}>
+                  <tr key={(user as any).id}>
                         <td>
-                            <div className='name'><Link href={{pathname: "/detailed", query: { search: user.id },}}>{user.name}</Link>
-                            <a href={`https://${user.website}`} target='_blank' className='website'>{website}</a>
-                            <a href={`mailto:${user.email}`} className='mail'>{mail}</a>
-                            <a href={`tel:${user.phone}`} className='phone'>{phone}</a>
+                            <div className='name'><Link href={{pathname: "/detailed", query: { search: (user as any).id },}}>{(user as any).name}</Link>
+                            <a href={`https://${(user as any).website}`} target='_blank' className='website'>{website}</a>
+                            <a href={`mailto:${(user as any).email}`} className='mail'>{mail}</a>
+                            <a href={`tel:${(user as any).phone}`} className='phone'>{phone}</a>
                             </div>
                             
                         </td>
