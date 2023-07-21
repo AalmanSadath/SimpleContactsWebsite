@@ -48,7 +48,7 @@ const App = () => {
                   <tr key={user.id}>
                         <td>
                             <div className='name'><Link href={{pathname: "/detailed", query: { search: user.id },}}>{user.name}</Link>
-                            <a href={`https://${user.website}`} className='website'>{website}</a>
+                            <a href={`https://${user.website}`} target='_blank' className='website'>{website}</a>
                             <a href={`mailto:${user.email}`} className='mail'>{mail}</a>
                             <a href={`tel:${user.phone}`} className='phone'>{phone}</a>
                             </div>

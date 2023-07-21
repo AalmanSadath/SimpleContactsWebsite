@@ -77,7 +77,7 @@ const Details = () => {
                 </tr>
                 <tr key={userObj.website}>
                       <td>
-                          <div className='name'>{website} <a href={`https://${userObj.website}`}>{userObj.website}</a>
+                          <div className='name'>{website} <a href={`https://${userObj.website}`} target='_blank'>{userObj.website}</a>
                           </div>
                       </td>
                       <td>
