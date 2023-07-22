@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './globals.css'
 import Link from 'next/link';
+import Head from 'next/head'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
@@ -32,7 +33,12 @@ const App = () => {
     
 
     return (
+        <>
+        <Head>
+        <title>Contacts</title>
+      </Head>
         <div className='whole'>
+            
         <header data-role="Header" className="home-header">
             <div className="contacts">Contacts</div>
         </header>
@@ -63,6 +69,7 @@ const App = () => {
       </table>
       </div>
       </div>
+      </>
   )
 }
 
