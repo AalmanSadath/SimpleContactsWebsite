@@ -1,6 +1,4 @@
 'use client';
-import Link from 'next/link'
-import { Metadata } from 'next'
 import { useEffect, useState } from 'react'
 import { useSearchParams } from "next/navigation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -93,8 +91,4 @@ const Details = () => {
 
 export default Details
 
-export const metadata: Metadata = {
-  title: 'Contacts',
-  description: '...',
-}
 
